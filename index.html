@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aref Hammadi</title>
+<meta name="description" content="AI researcher who ships. PhD work on graph neural networks for dialogue summarization, and AI products built and run in Lebanon: a talking robot, an offline-first shop system, Arabic news and writing bots.">
+<meta property="og:title" content="Aref Hammadi">
+<meta property="og:description" content="AI researcher who ships: graph neural networks for summarization, and AI products running in Lebanon.">
+<meta property="og:image" content="https://aref.eveai.cloud/img/og.png">
+<meta property="og:url" content="https://aref.eveai.cloud/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aref.eveai.cloud/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2318282D'/%3E%3Crect x='6' y='17' width='20' height='7' rx='2' fill='%23FFE15A'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' text-anchor='middle' fill='%23EDF1EF'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..700&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Aref Hammadi","url":"https://aref.eveai.cloud/","jobTitle":"AI researcher and engineer","address":{"@type":"PostalAddress","addressCountry":"LB"},"sameAs":["https://github.com/ArefHam","https://www.linkedin.com/in/aref-hammadi10"],"knowsAbout":["Graph neural networks","Extractive summarization","Retrieval-augmented generation","Voice assistants","Arabic NLP"]}
+</script>
+<style>
+:root{
+  --paper:#EDF1EF; --paper-2:#E2E8E5; --ink:#18282D; --muted:#4F6166; --line:#C9D3CF;
+  --cedar:#2E6B5E; --marker:#FFE15A; --marker-ink:#18282D; --hmc:#C8372D;
+  --font:"Schibsted Grotesk",system-ui,sans-serif; --arabic:"IBM Plex Sans Arabic",system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#111A1D; --paper-2:#18242A; --ink:#E4ECE9; --muted:#9AABAF; --line:#2B3A3F;
+    --cedar:#7CC7B2; --marker:#E9C93B; --marker-ink:#111A1D; --hmc:#EE6B5F; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#111A1D; --paper-2:#18242A; --ink:#E4ECE9; --muted:#9AABAF; --line:#2B3A3F;
+  --cedar:#7CC7B2; --marker:#E9C93B; --marker-ink:#111A1D; --hmc:#EE6B5F; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--font);font-feature-settings:"ss01"}
+a{color:var(--cedar);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--cedar);outline-offset:3px;border-radius:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1rem}
+@media (min-width:700px){.wrap{padding:0 2rem}}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;gap:1rem}
+.me{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--ink);font-weight:700}
+.me img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.top nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+.top nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
+.top nav a:hover{color:var(--ink)}
+@media (max-width:600px){.top nav{display:none}}
+html,body{overflow-x:hidden}
+
+/* hero */
+.hero{display:grid;gap:2.5rem;padding:2.5rem 0 4rem;align-items:start}
+@media (min-width:900px){.hero{grid-template-columns:1fr 1.15fr;padding-top:4rem}}
+.hero h1{font-size:clamp(2.6rem,6.5vw,4.6rem);line-height:1;letter-spacing:-.035em;font-weight:800;margin:0 0 1.25rem}
+.hero .lede{font-size:1.2rem;color:var(--muted);max-width:30rem;margin:0 0 1.5rem}
+.links{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.65rem 1.1rem;border-radius:999px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{text-decoration:none;background:var(--paper-2)}
+.btn.primary:hover{background:var(--cedar);border-color:var(--cedar);color:var(--paper)}
+
+.dialogue{margin:0;padding:0;list-style:none;font-size:1.05rem}
+.dialogue li{display:grid;grid-template-columns:4.5rem 1fr;gap:.75rem;padding:.55rem 0;border-bottom:1px dashed var(--line)}
+.dialogue li:last-child{border-bottom:0}
+.who{color:var(--muted);font-size:.9rem;padding-top:.1rem}
+.dialogue .aref .who{color:var(--ink);font-weight:700}
+.say mark{background:linear-gradient(var(--marker),var(--marker)) no-repeat 0 60%/0% 78%;color:inherit;padding:0 .1em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.dialogue.done .say mark{color:var(--marker-ink)}
+.caption{font-size:.9rem;color:var(--muted);margin:.9rem 0 0;padding-left:5.25rem}
+@media (max-width:480px){.dialogue li{grid-template-columns:1fr;gap:0}.caption{padding-left:0}}
+@media (prefers-reduced-motion:no-preference){
+  .say mark{transition:background-size .55s cubic-bezier(.6,0,.2,1),color .3s}
+}
+.dialogue.done .say mark{background-size:100% 78%}
+
+/* sections */
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.7rem,3.4vw,2.3rem);letter-spacing:-.025em;line-height:1.1;margin:0 0 .5rem;font-weight:800}
+.sub{color:var(--muted);margin:0 0 2.5rem;max-width:40rem}
+h3{font-size:1.45rem;letter-spacing:-.015em;line-height:1.2;margin:0}
+p{margin:0 0 1rem}
+
+/* projects */
+.project{display:grid;gap:1.5rem;padding:2.25rem 0;border-bottom:1px solid var(--line)}
+.project:last-child{border-bottom:0}
+@media (min-width:900px){.project{grid-template-columns:15rem 1fr;gap:3rem}}
+.ph{display:flex;flex-direction:column;gap:.5rem}
+.ph .ar{font-family:var(--arabic);font-weight:600;color:var(--muted);font-size:1.1rem}
+.status{display:inline-flex;align-items:center;gap:.45rem;font-size:.88rem;color:var(--muted)}
+.status::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--muted)}
+.status.live::before{background:#2FA36B;box-shadow:0 0 0 3px color-mix(in srgb,#2FA36B 25%,transparent)}
+.status.research::before{background:var(--marker)}
+.pb{max-width:44rem}
+.pb .what{font-size:1.12rem}
+.pb ul{margin:0 0 1rem;padding-left:1.1rem}
+.pb li{margin:.3rem 0}
+.stack{font-size:.92rem;color:var(--muted);margin:0 0 .5rem}
+.plinks{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.95rem;font-weight:600}
+
+/* Sila gets the visuals */
+.sila{grid-template-columns:1fr}
+@media (min-width:900px){.sila{grid-template-columns:15rem 1fr 15rem}}
+.sila figure{margin:0;display:grid;gap:.75rem;align-content:start}
+.sila figure img{width:100%;height:auto;border-radius:14px;background:#C9CBCC;display:block}
+.sila .face{background:#000;border-radius:14px;padding:1.2rem;display:grid;place-items:center}
+.sila .face img{width:100%;max-width:220px;image-rendering:pixelated;background:#000}
+figcaption{font-size:.85rem;color:var(--muted)}
+@media (max-width:899px){.sila figure{grid-template-columns:1fr 1fr}.sila figcaption{grid-column:1/-1}}
+
+/* more */
+.more{display:grid;gap:0 3rem;margin:0;padding:0;list-style:none}
+@media (min-width:760px){.more{grid-template-columns:1fr 1fr}}
+.more li{padding:1rem 0;border-bottom:1px dashed var(--line)}
+.more b{display:block;font-size:1.05rem}
+.more span{color:var(--muted);font-size:.97rem}
+
+/* skills */
+.skills{display:grid;gap:1.75rem 3rem;margin:0}
+@media (min-width:760px){.skills{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1050px){.skills{grid-template-columns:repeat(3,1fr)}}
+.skills dt{font-weight:700;margin-bottom:.3rem}
+.skills dd{margin:0;color:var(--muted)}
+
+.infra{background:var(--paper-2);border-radius:18px;padding:1.75rem;margin-top:2.5rem;max-width:52rem}
+.infra h3{font-size:1.2rem;margin-bottom:.6rem}
+.infra p:last-child{margin:0}
+
+/* contact */
+.contact{display:grid;gap:2.5rem}
+@media (min-width:900px){.contact{grid-template-columns:1.2fr 1fr}}
+.arabic{font-family:var(--arabic);direction:rtl;text-align:right;background:var(--paper-2);border-radius:18px;padding:1.5rem 1.75rem;line-height:1.9;font-size:1.08rem}
+.arabic p{margin:0 0 .6rem}
+.arabic p:last-child{margin:0}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+.theme{background:none;border:1.5px solid var(--line);color:var(--muted);border-radius:999px;padding:.3rem .8rem;font:inherit;font-size:.85rem;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="me" href="#top"><img src="https://avatars.githubusercontent.com/u/56312801?v=4&s=96" alt="" width="40" height="40">Aref Hammadi</a>
+    <nav aria-label="Sections"><a href="#work">Work</a><a href="#research">Research</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>AI researcher who ships.</h1>
+        <p class="lede">I'm doing a PhD on graph neural networks that summarize conversations. I also build AI products and run them on my own servers in Lebanon, under my studio EveAI.</p>
+        <div class="links">
+          <a class="btn primary" href="#work">See the work</a>
+          <a class="btn" href="https://www.linkedin.com/in/aref-hammadi10">LinkedIn</a>
+          <a class="btn" href="https://github.com/ArefHam">GitHub</a>
+        </div>
+      </div>
+      <div>
+        <ol class="dialogue" id="dialogue" aria-label="A short conversation, with the key lines highlighted">
+          <li><span class="who">Visitor</span><span class="say">Who are you?</span></li>
+          <li class="aref"><span class="who">Aref</span><span class="say"><mark>Aref Hammadi, a PhD student in AI. My model reads a conversation as a graph and keeps the lines that matter.</mark></span></li>
+          <li><span class="who">Visitor</span><span class="say">So mostly research?</span></li>
+          <li class="aref"><span class="who">Aref</span><span class="say">Half of it. <mark>The other half is building AI products that real people use every day.</mark></span></li>
+          <li><span class="who">Visitor</span><span class="say">Like what?</span></li>
+          <li class="aref"><span class="who">Aref</span><span class="say"><mark>A desk robot that talked to visitors at an expo in Lebanese Arabic,</mark> a shop system that keeps selling when the internet drops, and a bot that reads 40+ news outlets.</span></li>
+          <li><span class="who">Visitor</span><span class="say">Can I work with you?</span></li>
+          <li class="aref"><span class="who">Aref</span><span class="say">Yes: <mark>remote AI and ML roles, or a build for your business.</mark></span></li>
+        </ol>
+        <p class="caption">The highlighted lines are the extractive summary of this chat. Picking them well is what my research is about.</p>
+      </div>
+    </div>
+
+    <section id="work" aria-labelledby="work-h">
+      <h2 id="work-h">Selected work</h2>
+      <p class="sub">Most of this code is private because it runs real businesses. Each entry says what is live, what I built, and with what.</p>
+
+      <article class="project sila">
+        <div class="ph">
+          <h3>Sila</h3><span class="ar" lang="ar">صلة</span>
+          <span class="status live">Worked an expo stand, 2 robots running</span>
+        </div>
+        <div class="pb">
+          <p class="what">A small talking desk robot with an animated face. It speaks Lebanese Arabic and English, and it worked as HMC's salesperson at an expo, answering visitors about batteries and solar in "amps", the unit Lebanese households actually think in.</p>
+          <ul>
+            <li>Voice server on my VPS: speech in, any OpenAI-compatible model as the brain, a custom voice, and a learning mode where the shop manager teaches it new answers.</li>
+            <li>Firmware for an ESP32-S3 camera board with a 3.5" screen, built in GitHub Actions.</li>
+            <li>The body is generated in Python from one parameters file and printed on a Bambu A1. It's shaped like an HMC battery, down to the terminal button and bolt antenna.</li>
+            <li>A laptop "booth caller" that invites passers-by in Sila's voice and goes quiet while she's talking.</li>
+            <li>Now planned as a product line in four sizes, researched down to boards, batteries and landed cost in Beirut.</li>
+          </ul>
+          <p class="stack">ESP32-S3, ESP-IDF, Python, WebSockets, LLM + TTS APIs, manifold3d, Blender, Coolify</p>
+        </div>
+        <figure>
+          <img src="img/sila-render.webp" alt="Render of Sila: a dark battery-shaped body with a gold cap, a screen, and a lightning-bolt antenna on a stand" width="700" height="750" loading="lazy">
+          <div class="face"><img src="img/sila-face.gif" alt="Sila's happy animated face" width="280" height="150" loading="lazy"></div>
+          <figcaption>The generated body, and one of Sila's faces.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project">
+        <div class="ph">
+          <h3>HMC Store</h3>
+          <span class="status live">Live in the cloud</span>
+        </div>
+        <div class="pb">
+          <p class="what">One program to run a battery and solar shop: till, stock, serial numbers, purchases, customer debts, repairs, cash, VAT invoices, labels, and battery pack assembly with cell matching.</p>
+          <ul>
+            <li>Runs on the shop PC and keeps selling offline, then syncs field by field with a cloud copy so the owner can check the shop from a phone.</li>
+            <li>English and Lebanese Arabic, with search that understands Arabic spelling variants and shorthand like "6kw".</li>
+            <li>Prints stickers straight to label printers (TSPL/ZPL) and turns any phone into a barcode scanner.</li>
+            <li>Written for a first-time shop owner: plain words instead of accounting terms, help on every field.</li>
+            <li>68+ unit tests and an end-to-end test of two nodes syncing.</li>
+          </ul>
+          <p class="stack">Node 22 with SQLite, React, TypeScript, Vitest, Docker</p>
+          <div class="plinks"><a href="https://store.eveai.cloud">store.eveai.cloud</a><span class="stack">(login required)</span></div>
+        </div>
+      </article>
+
+      <article class="project" id="research">
+        <div class="ph">
+          <h3>Dialogue summarization with graph neural networks</h3>
+          <span class="status research">PhD research, paper in preparation for IEEE Access</span>
+        </div>
+        <div class="pb">
+          <p class="what">Customer-support threads on Twitter are long and tangled. My model reads each one as a graph at several levels (tweets, segments, speakers) that changes as the conversation goes, and picks the utterances a human summary would keep.</p>
+          <ul>
+            <li>Hierarchical dynamic GNN on sentence embeddings, evaluated on TweetSumm with ROUGE-1.5.5 and ablations.</li>
+            <li>Self-supervised pretraining on unlabeled support dialogues.</li>
+            <li>Teacher-student training: the teacher labels about 100k unlabeled TWCS dialogues, and the student learns from those plus the 880 human-labeled ones.</li>
+          </ul>
+          <p class="stack">PyTorch, Hugging Face Transformers, sentence-transformers, ROUGE</p>
+          <div class="plinks"><span class="stack">Code will be released with the paper.</span><a href="https://github.com/ArefHam/CS224W-Colab">Graph ML coursework (Stanford CS224W)</a></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="ph">
+          <h3>Lebanon News Bot</h3>
+          <span class="status live">Running daily on Telegram</span>
+        </div>
+        <div class="pb">
+          <p class="what">Reads more than 40 Lebanese outlets (TV, newspapers, the national agency, the army, party sites) plus X accounts, and sends short Arabic briefs with analysis twice a day. Readers can also ask it questions about the archive.</p>
+          <ul>
+            <li>AI only where it pays: headlines and breaking alerts cost nothing, a full brief costs about $0.08, and a brief under 30 minutes old is reused.</li>
+            <li>Every model call's cost is logged. Admins get alerts at 50, 80 and 100% of the monthly budget and can raise it with one button.</li>
+            <li>Every model can be swapped by configuration, so a deprecated model is a one-line change.</li>
+            <li>The full archive is written to an Obsidian vault automatically (440+ commits so far).</li>
+          </ul>
+          <p class="stack">Python, Telegram Bot API, OpenAI and Gemini APIs, Docker</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="ph">
+          <h3>Breastfeeding Chat</h3>
+          <span class="status live">Live, open source</span>
+        </div>
+        <div class="pb">
+          <p class="what">A Persian and English assistant that answers mothers' breastfeeding questions from a curated knowledge base.</p>
+          <ul>
+            <li>Retrieval-augmented agent in n8n, with answers checked against multiple-choice and open-ended question sets.</li>
+            <li>The new version (in launch testing) adds accounts and saved conversations: Supabase Auth and Postgres with row-level security, and an Edge Function in between, so the browser never holds a secret or the agent's address.</li>
+            <li>The build fails if a secret ever reaches the bundle. End-to-end tests cover Persian right-to-left and English at five screen widths.</li>
+          </ul>
+          <p class="stack">n8n, React, TypeScript, Supabase, Playwright</p>
+          <div class="plinks"><a href="https://chat.eveai.cloud">chat.eveai.cloud</a><a href="https://github.com/ArefHam/breastfeedingchat">Source on GitHub</a></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="ph">
+          <h3>CouBank</h3>
+          <span class="status live">Live, in development</span>
+        </div>
+        <div class="pb">
+          <p class="what">A money app for couples: one shared household treasury, with each partner's own view of what they spend and save.</p>
+          <ul>
+            <li>Money stored as integers end to end, database-backed sessions, and service-level tests for the money rules.</li>
+            <li>Web app plus an Android app, deployed with Docker.</li>
+          </ul>
+          <p class="stack">Next.js, TypeScript, Prisma, PostgreSQL, Android</p>
+          <div class="plinks"><a href="https://coubank.eveai.cloud">coubank.eveai.cloud</a></div>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="more-h">
+      <h2 id="more-h">More things I've built</h2>
+      <p class="sub">Smaller tools, client work and experiments.</p>
+      <ul class="more">
+        <li><b>Sanad</b><span>A personal AI chief of staff on top of Claude Code: voice studio, daily routines, and an Obsidian memory that learns. Lebanese Arabic and English.</span></li>
+        <li><b>Issue Designer</b><span>A Telegram bot and design engine that turns text into magazine-style bulletins, Arabic right-to-left first, as print-ready PDF.</span></li>
+        <li><b>Channel writer bot</b><span>Telegram bot and Mini App for an Arabic publication: fresh topic ideas, three plans to choose from, a draft, and a critic that scores originality. About $0.09 a post.</span></li>
+        <li><b>Fact Checker</b><span>A SaaS for checking claims: multilingual retrieval, an evidence store and a human review queue. FastAPI, PostgreSQL, React.</span></li>
+        <li><b>ResearchHarvester</b><span>A Persian and English desktop app that collects, filters and exports research opportunities. Ships as a Windows installer.</span></li>
+        <li><b>Calendar Notepad Agent</b><span>A multi-tenant Telegram assistant: each user's Google Calendar, notes and reminders, team roles, and Redis workers.</span></li>
+        <li><b>to3d</b><span>From photos of a person to a 200 mm 3D-printable figurine: mesh grafting and repair in Blender with OpenVDB.</span></li>
+        <li><b>EveAI</b><span>My studio and brand for AI products and courses: <a href="https://eveai.cloud">eveai.cloud</a>.</span></li>
+      </ul>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-h">
+      <h2 id="skills-h">What I work with</h2>
+      <p class="sub">Grouped by the kind of problem, not by buzzword.</p>
+      <dl class="skills">
+        <div><dt>Research</dt><dd>Graph neural networks, extractive summarization, dialogue modelling, self-supervised pretraining, pseudo-labelling, evaluation design.</dd></div>
+        <div><dt>Applied AI</dt><dd>RAG, agents and tool use, voice (speech in, speech out), cost control, provider-agnostic model layers, Arabic and Persian text.</dd></div>
+        <div><dt>Software</dt><dd>Python (FastAPI), TypeScript (React, Next.js, Node), PostgreSQL, SQLite, Supabase, Telegram bots.</dd></div>
+        <div><dt>Hardware</dt><dd>ESP32-S3 firmware, screens and audio boards, enclosures generated from code, 3D printing.</dd></div>
+        <div><dt>Running things</dt><dd>Docker, Coolify, GitHub Actions, n8n, DNS, backups, budgets and alerts.</dd></div>
+        <div><dt>How I build</dt><dd>With AI coding agents (Claude Code, Codex) as a team: I write the plan, review every change, and keep the tests.</dd></div>
+      </dl>
+      <div class="infra">
+        <h3>I run my own stack</h3>
+        <p>Everything above runs on one 8 GB VPS that I manage with Coolify: 15+ apps and services, including the products, n8n with workers, S3 storage, a message queue and a speech-to-text server. Each product gets its own subdomain under eveai.cloud, deploys from GitHub, and has its own API key so I can see what each one costs.</p>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-h">
+      <div class="contact">
+        <div>
+          <h2 id="contact-h">Let's talk</h2>
+          <p class="sub">Based in Lebanon, open to remote AI and ML roles, research collaborations, and building AI products for businesses.</p>
+          <div class="links">
+            <a class="btn primary" href="https://www.linkedin.com/in/aref-hammadi10">Message me on LinkedIn</a>
+            <a class="btn" href="https://github.com/ArefHam">GitHub</a>
+            <a class="btn" href="https://eveai.cloud">EveAI</a>
+          </div>
+        </div>
+        <div class="arabic" lang="ar">
+          <p>بدّك بوت، تطبيق، أو روبوت بيحكي لبناني لشغلك؟</p>
+          <p>بعملّك ياه من الفكرة لحدّ ما يشتغل عندك، وبضلّ معك بعدها. ابعتلي على لينكدإن ومنحكي.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center">
+      <span>Aref Hammadi, 2026. Hand-written HTML, no tracking.</span>
+      <button class="theme" id="theme" type="button">Switch theme</button>
+    </div>
+  </footer>
+</div>
+<script>
+(function(){
+  var d=document.getElementById('dialogue');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){d.classList.add('done');}
+  else{
+    var marks=d.querySelectorAll('mark');
+    marks.forEach(function(m,i){m.style.transitionDelay=(0.5+i*0.45)+'s';});
+    requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('done');});});
+  }
+  var root=document.documentElement, btn=document.getElementById('theme');
+  try{var saved=localStorage.getItem('theme');if(saved)root.setAttribute('data-theme',saved);}catch(e){}
+  btn.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    var next=dark?'light':'dark';root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
