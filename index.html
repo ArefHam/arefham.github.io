@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aref Hammadi</title>
-<meta name="description" content="AI researcher who ships. PhD work on graph neural networks for dialogue summarization, and AI products built and run in Lebanon: a talking robot, an offline-first shop system, Arabic writing bots.">
+<meta name="description" content="AI researcher who ships. PhD in AI (graph neural networks, NLP), and AI products built and run in Lebanon: a talking robot, an offline-first shop system, Arabic writing bots.">
 <meta property="og:title" content="Aref Hammadi">
-<meta property="og:description" content="AI researcher who ships: graph neural networks for summarization, and AI products running in Lebanon.">
+<meta property="og:description" content="AI researcher who ships: PhD in AI, and AI products running in Lebanon.">
 <meta property="og:image" content="https://aref.eveai.cloud/img/og.png">
 <meta property="og:url" content="https://aref.eveai.cloud/">
 <meta name="twitter:card" content="summary_large_image">
@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..700&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Aref Hammadi","url":"https://aref.eveai.cloud/","jobTitle":"AI researcher and engineer","address":{"@type":"PostalAddress","addressCountry":"LB"},"sameAs":["https://github.com/ArefHam","https://www.linkedin.com/in/aref-hammadi10"],"knowsAbout":["Graph neural networks","Extractive summarization","Retrieval-augmented generation","Voice assistants","Arabic NLP"]}
+{"@context":"https://schema.org","@type":"Person","name":"Aref Hammadi","url":"https://aref.eveai.cloud/","jobTitle":"AI researcher and engineer","address":{"@type":"PostalAddress","addressCountry":"LB"},"sameAs":["https://github.com/ArefHam","https://www.linkedin.com/in/aref-hammadi10"],"knowsAbout":["Graph neural networks","Natural language processing","Retrieval-augmented generation","Voice assistants","Arabic NLP"]}
 </script>
 <style>
 :root{
@@ -145,14 +145,14 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px sol
 <div class="wrap">
   <header class="top">
     <a class="me" href="#top"><img src="https://avatars.githubusercontent.com/u/56312801?v=4&s=96" alt="" width="40" height="40">Aref Hammadi</a>
-    <nav aria-label="Sections"><a href="#work">Work</a><a href="#research">Research</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+    <nav aria-label="Sections"><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
   </header>
 
   <main id="top">
     <div class="hero">
       <div>
         <h1>AI researcher who ships.</h1>
-        <p class="lede">I'm doing a PhD on graph neural networks that summarize conversations. I also build AI products end to end and run them myself, from Lebanon, under my studio EveAI.</p>
+        <p class="lede">I'm doing a PhD in AI, working with graph neural networks and language. I also build AI products end to end and run them myself, from Lebanon, under my studio EveAI.</p>
         <div class="links">
           <a class="btn primary" href="#work">See the work</a>
           <a class="btn" href="https://www.linkedin.com/in/aref-hammadi10">LinkedIn</a>
@@ -162,7 +162,7 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px sol
       <div>
         <ol class="dialogue" id="dialogue" aria-label="A short conversation, with the key lines highlighted">
           <li><span class="who">Visitor</span><span class="say">Who are you?</span></li>
-          <li class="aref"><span class="who">Aref</span><span class="say"><mark>Aref Hammadi, a PhD student in AI. My model reads a conversation as a graph and keeps the lines that matter.</mark></span></li>
+          <li class="aref"><span class="who">Aref</span><span class="say"><mark>Aref Hammadi, a PhD student in AI, working with graph neural networks.</mark></span></li>
           <li><span class="who">Visitor</span><span class="say">So mostly research?</span></li>
           <li class="aref"><span class="who">Aref</span><span class="say">Half of it. <mark>The other half is building AI products that real people use every day.</mark></span></li>
           <li><span class="who">Visitor</span><span class="say">Like what?</span></li>
@@ -170,7 +170,7 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px sol
           <li><span class="who">Visitor</span><span class="say">Can I work with you?</span></li>
           <li class="aref"><span class="who">Aref</span><span class="say">Yes: <mark>remote AI and ML roles, or a build for your business.</mark></span></li>
         </ol>
-        <p class="caption">The highlighted lines are the extractive summary of this chat. Picking them well is what my research is about.</p>
+        <p class="caption">The highlighted lines are a summary of this chat, picked the way a summarization model would.</p>
       </div>
     </div>
 
@@ -217,23 +217,6 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px sol
           </ul>
           <p class="stack">Node 22 with SQLite, React, TypeScript, Vitest, Docker</p>
           <div class="plinks"><a href="https://store.eveai.cloud">store.eveai.cloud</a><span class="stack">(login required)</span></div>
-        </div>
-      </article>
-
-      <article class="project" id="research">
-        <div class="ph">
-          <h3>Dialogue summarization with graph neural networks</h3>
-          <span class="status research">PhD research, paper in preparation</span>
-        </div>
-        <div class="pb">
-          <p class="what">Customer-support threads on Twitter are long and tangled. My model reads each one as a graph at several levels (tweets, segments, speakers) that changes as the conversation goes, and picks the utterances a human summary would keep.</p>
-          <ul>
-            <li>Hierarchical dynamic GNN on sentence embeddings, evaluated on TweetSumm with ROUGE-1.5.5 and ablations.</li>
-            <li>Self-supervised pretraining on unlabeled support dialogues.</li>
-            <li>Teacher-student training: the teacher labels about 100k unlabeled TWCS dialogues, and the student learns from those plus the 880 human-labeled ones.</li>
-          </ul>
-          <p class="stack">PyTorch, Hugging Face Transformers, sentence-transformers, ROUGE</p>
-          <p class="stack">Code will be released with the paper.</p>
         </div>
       </article>
 
@@ -289,7 +272,7 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px sol
       <h2 id="skills-h">What I work with</h2>
       <p class="sub">Grouped by the kind of problem, not by buzzword.</p>
       <dl class="skills">
-        <div><dt>Research</dt><dd>Graph neural networks, extractive summarization, dialogue modelling, self-supervised pretraining, pseudo-labelling, evaluation design.</dd></div>
+        <div><dt>Research</dt><dd>Graph neural networks, NLP, self-supervised learning, evaluation design.</dd></div>
         <div><dt>Applied AI</dt><dd>RAG, agents and tool use, voice (speech in, speech out), cost control, provider-agnostic model layers, Arabic and Persian text.</dd></div>
         <div><dt>Software</dt><dd>Python (FastAPI), TypeScript (React, Next.js, Node), PostgreSQL, SQLite, Supabase, Telegram bots.</dd></div>
         <div><dt>Hardware</dt><dd>ESP32-S3 firmware, screens and audio boards, enclosures generated from code, 3D printing.</dd></div>
