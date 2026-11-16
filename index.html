@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aref Hammadi</title>
-<meta name="description" content="AI researcher who ships. PhD work on graph neural networks for dialogue summarization, and AI products built and run in Lebanon: a talking robot, an offline-first shop system, Arabic news and writing bots.">
+<meta name="description" content="AI researcher who ships. PhD work on graph neural networks for dialogue summarization, and AI products built and run in Lebanon: a talking robot, an offline-first shop system, Arabic writing bots.">
 <meta property="og:title" content="Aref Hammadi">
 <meta property="og:description" content="AI researcher who ships: graph neural networks for summarization, and AI products running in Lebanon.">
 <meta property="og:image" content="https://aref.eveai.cloud/img/og.png">
@@ -166,7 +166,7 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px sol
           <li><span class="who">Visitor</span><span class="say">So mostly research?</span></li>
           <li class="aref"><span class="who">Aref</span><span class="say">Half of it. <mark>The other half is building AI products that real people use every day.</mark></span></li>
           <li><span class="who">Visitor</span><span class="say">Like what?</span></li>
-          <li class="aref"><span class="who">Aref</span><span class="say"><mark>A desk robot that talked to visitors at an expo in Lebanese Arabic,</mark> a shop system that keeps selling when the internet drops, and a bot that reads 40+ news outlets.</span></li>
+          <li class="aref"><span class="who">Aref</span><span class="say"><mark>A desk robot that talked to visitors at an expo in Lebanese Arabic,</mark> and a shop system that keeps selling when the internet drops.</span></li>
           <li><span class="who">Visitor</span><span class="say">Can I work with you?</span></li>
           <li class="aref"><span class="who">Aref</span><span class="say">Yes: <mark>remote AI and ML roles, or a build for your business.</mark></span></li>
         </ol>
@@ -223,7 +223,7 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px sol
       <article class="project" id="research">
         <div class="ph">
           <h3>Dialogue summarization with graph neural networks</h3>
-          <span class="status research">PhD research, paper in preparation for IEEE Access</span>
+          <span class="status research">PhD research, paper in preparation</span>
         </div>
         <div class="pb">
           <p class="what">Customer-support threads on Twitter are long and tangled. My model reads each one as a graph at several levels (tweets, segments, speakers) that changes as the conversation goes, and picks the utterances a human summary would keep.</p>
@@ -233,31 +233,14 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px sol
             <li>Teacher-student training: the teacher labels about 100k unlabeled TWCS dialogues, and the student learns from those plus the 880 human-labeled ones.</li>
           </ul>
           <p class="stack">PyTorch, Hugging Face Transformers, sentence-transformers, ROUGE</p>
-          <div class="plinks"><span class="stack">Code will be released with the paper.</span><a href="https://github.com/ArefHam/CS224W-Colab">Graph ML coursework (Stanford CS224W)</a></div>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="ph">
-          <h3>Lebanon News Bot</h3>
-          <span class="status live">Running daily on Telegram</span>
-        </div>
-        <div class="pb">
-          <p class="what">Reads more than 40 Lebanese outlets (TV, newspapers, the national agency, the army, party sites) plus X accounts, and sends short Arabic briefs with analysis twice a day. Readers can also ask it questions about the archive.</p>
-          <ul>
-            <li>AI only where it pays: headlines and breaking alerts cost nothing, a full brief costs about $0.08, and a brief under 30 minutes old is reused.</li>
-            <li>Every model call's cost is logged. Admins get alerts at 50, 80 and 100% of the monthly budget and can raise it with one button.</li>
-            <li>Every model can be swapped by configuration, so a deprecated model is a one-line change.</li>
-            <li>The full archive is written to an Obsidian vault automatically (440+ commits so far).</li>
-          </ul>
-          <p class="stack">Python, Telegram Bot API, OpenAI and Gemini APIs, Docker</p>
+          <p class="stack">Code will be released with the paper.</p>
         </div>
       </article>
 
       <article class="project">
         <div class="ph">
           <h3>Breastfeeding Chat</h3>
-          <span class="status live">Live, open source</span>
+          <span class="status live">Live</span>
         </div>
         <div class="pb">
           <p class="what">A Persian and English assistant that answers mothers' breastfeeding questions from a curated knowledge base.</p>
@@ -267,7 +250,6 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px sol
             <li>The build fails if a secret ever reaches the bundle. End-to-end tests cover Persian right-to-left and English at five screen widths.</li>
           </ul>
           <p class="stack">n8n, React, TypeScript, Supabase, Playwright</p>
-          <div class="plinks"><a href="https://chat.eveai.cloud">chat.eveai.cloud</a><a href="https://github.com/ArefHam/breastfeedingchat">Source on GitHub</a></div>
         </div>
       </article>
 
