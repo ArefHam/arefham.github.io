@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aref Hammadi</title>
-<meta name="description" content="AI researcher who ships. PhD in AI (graph neural networks, NLP), and AI products built and run in Lebanon: a talking robot, an offline-first shop system, Arabic writing bots.">
+<meta name="description" content="AI researcher who ships. PhD in AI (graph neural networks, NLP), and AI products built and run in Lebanon: a talking robot, an offline-first shop system, AI characters, Arabic writing bots. Open to AI roles, consulting and research.">
 <meta name="theme-color" content="#F8F7FF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E0A1A" media="(prefers-color-scheme: dark)">
 <meta property="og:title" content="Aref Hammadi">
-<meta property="og:description" content="AI researcher who ships: PhD in AI, and AI products running in Lebanon.">
+<meta property="og:description" content="AI researcher who ships: PhD in AI, and AI products running in Lebanon. Open to AI roles, consulting and research.">
 <meta property="og:image" content="https://aref.eveai.cloud/img/og.png">
 <meta property="og:url" content="https://aref.eveai.cloud/">
 <meta name="twitter:card" content="summary_large_image">
@@ -16,14 +16,16 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237C24FF'/%3E%3Cstop offset='1' stop-color='%23296BFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Crect x='6' y='18' width='20' height='6' rx='2' fill='%23FFC233'/%3E%3Ctext x='16' y='22.5' font-family='Arial' font-weight='700' font-size='15' text-anchor='middle' fill='%23FFFFFF'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,500..700,0..100;1,9..144,500..700,0..100&family=Readex+Pro:wght@300..700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Aref Hammadi","url":"https://aref.eveai.cloud/","jobTitle":"AI researcher and engineer","address":{"@type":"PostalAddress","addressCountry":"LB"},"sameAs":["https://github.com/ArefHam","https://www.linkedin.com/in/aref-hammadi10"],"knowsAbout":["Graph neural networks","Natural language processing","Retrieval-augmented generation","Voice assistants","Arabic NLP"]}
+{"@context":"https://schema.org","@type":"Person","name":"Aref Hammadi","url":"https://aref.eveai.cloud/","jobTitle":"AI researcher and engineer","worksFor":{"@type":"Organization","name":"EveAI","url":"https://eveai.cloud"},"address":{"@type":"PostalAddress","addressCountry":"LB"},"sameAs":["https://github.com/ArefHam","https://www.linkedin.com/in/aref-hammadi10"],"knowsAbout":["Graph neural networks","Natural language processing","Retrieval-augmented generation","Voice assistants","Arabic NLP","AI character design"]}
 </script>
 <style>
 /* Colours are EveAI's own tokens (eveai.cloud, "Logo plus joy"):
    violet #7C24FF and blue #296BFF from the logo, sun #FFC233 for highlights, mint #1FC796 for "live".
-   The violet-to-blue gradient is used for one thing only: the circuit lines from the EveAI logo (hero, and the line the projects hang off). */
+   The violet-to-blue gradient is used for one thing only: the circuit lines from the EveAI logo.
+   Type is the logo too: Fraunces (an organic serif, the "Eve" curve) for headings, Readex Pro (geometric, the
+   circuit, and EveAI's own font, Arabic included) for everything else. */
 :root{
   --canvas:#F8F7FF; --surface:#FFFFFF; --surface-2:#F0EFF8; --line:#E1E0E9; --line-2:#C7C6CF;
   --ink:#0E0A1A; --ink-2:#403F46; --ink-3:#58575E;
@@ -31,10 +33,11 @@
   --action:#296BFF; --action-hover:#1757EA; --link:#1757EA;
   --sun:#FFC233; --sun-soft:#FFF6E5; --mint:#1FC796; --mint-ink:#086248;
   --night:#0E0A1A; --night-2:#1D1A2C; --night-line:#2E2A40; --night-ink:#F0EFF8; --night-muted:#A2A1AB;
-  --node:#4E45FF; --ring-fill:var(--canvas);
+  --node:#4E45FF; --ring-bg:var(--canvas);
   --grad:linear-gradient(180deg,#7C24FF 0%,#3A5DFF 70%,#296BFF 100%);
   --shadow:0 24px 48px -16px rgba(46,16,101,.28);
   --font:"Readex Pro","Segoe UI",Tahoma,system-ui,sans-serif;
+  --display:"Fraunces",Georgia,serif;
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){
@@ -56,7 +59,7 @@
   --node:#74A2FF; --shadow:0 24px 48px -16px rgba(0,0,0,.65); color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:5.5rem}
 html,body{overflow-x:hidden}
 body{margin:0;background:var(--canvas);color:var(--ink);font:400 1.0625rem/1.65 var(--font)}
 a{color:var(--link);text-underline-offset:.2em;text-decoration-thickness:1px}
@@ -65,36 +68,45 @@ a:hover{text-decoration-thickness:2px}
 .wrap{max-width:70rem;margin:0 auto;padding:0 1rem}
 @media (min-width:700px){.wrap{padding:0 2rem}}
 p{margin:0 0 1rem}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;z-index:20;background:var(--surface);padding:.5rem 1rem;border-radius:8px}
 
-/* top bar */
-.top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;gap:1rem}
-.me{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--ink);font-weight:600;font-size:1.05rem}
-.me img{width:40px;height:40px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px var(--canvas),0 0 0 4px var(--line-2)}
-.top nav{display:flex;gap:1.5rem}
+/* sticky top bar: contact is always one tap away */
+.topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--canvas) 86%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid transparent}
+.topbar.scrolled{border-bottom-color:var(--line)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:.8rem 0;gap:1rem}
+.me{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ink);font-weight:600;font-size:1.02rem;white-space:nowrap}
+.me img{width:36px;height:36px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px var(--canvas),0 0 0 4px var(--line-2)}
+.top-right{display:flex;align-items:center;gap:1.5rem}
+.top nav{display:flex;gap:1.35rem}
 .top nav a{color:var(--ink-3);text-decoration:none;font-size:.95rem}
 .top nav a:hover{color:var(--ink)}
-@media (max-width:600px){.top nav{display:none}}
+@media (max-width:860px){.top nav{display:none}}
 
 /* buttons: EveAI's pill */
 .links{display:flex;gap:.75rem;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 1.25rem;border-radius:999px;border:1.5px solid var(--line-2);color:var(--ink);background:var(--surface);text-decoration:none;font-weight:500;font-size:.98rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:0 1.25rem;border-radius:999px;border:1.5px solid var(--line-2);color:var(--ink);background:var(--surface);text-decoration:none;font-weight:500;font-size:.98rem;white-space:nowrap}
 .btn:hover{border-color:var(--ink-3)}
 .btn.primary{background:var(--action);border-color:var(--action);color:#fff}
 .btn.primary:hover{background:var(--action-hover);border-color:var(--action-hover)}
+.btn.sm{min-height:38px;padding:0 1rem;font-size:.92rem}
+.btn svg{width:18px;height:18px;flex:none}
 
 /* hero */
-.hero{display:grid;gap:4.5rem;padding:2.5rem 0 5rem;align-items:center}
-@media (min-width:960px){.hero{grid-template-columns:1fr 1.1fr;gap:4rem;padding:7.5rem 0 6rem}}
+.hero{display:grid;gap:6.5rem;padding:2.5rem 0 3.5rem;align-items:center}
+@media (min-width:960px){.hero{grid-template-columns:1fr 1.1fr;gap:4rem;padding:8.5rem 0 4.5rem}}
 .avail{display:inline-flex;align-items:center;gap:.6rem;font-size:.92rem;color:var(--mint-ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.35rem .9rem .35rem .7rem;margin-bottom:1.5rem}
-.hero h1{font-size:clamp(2.75rem,6.6vw,4.9rem);line-height:.98;letter-spacing:-.04em;font-weight:700;margin:0 0 1.5rem}
+h1,h2{font-family:var(--display);font-variation-settings:"SOFT" 50;font-optical-sizing:auto}
+.hero h1{font-size:clamp(2.9rem,6.8vw,5.2rem);line-height:.98;letter-spacing:-.025em;font-weight:600;margin:0 0 1.5rem}
 .hero .lede{font-size:1.2rem;color:var(--ink-2);max-width:31rem;margin:0 0 2rem;font-weight:300}
 .hero .lede b{font-weight:500;color:var(--ink)}
+.hero .lede a{color:inherit}
 
 /* the night panel with the chat */
 .panel{position:relative;background:var(--night);color:var(--night-ink);border-radius:28px;padding:1.75rem 1.5rem 1.5rem;box-shadow:var(--shadow);border:1px solid var(--night-line)}
 @media (min-width:600px){.panel{padding:2rem 2.25rem 1.75rem}}
-.traces circle{fill:var(--canvas)}
 .traces{position:absolute;bottom:calc(100% - 2px);right:2rem;width:150px;height:auto;pointer-events:none}
+.traces circle{fill:var(--canvas)}
 @media (max-width:599px){.traces{width:112px;right:1.25rem}}
 .dialogue{margin:0;padding:0;list-style:none;font-size:1.04rem}
 .dialogue li{display:grid;grid-template-columns:4.5rem 1fr;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--night-line)}
@@ -111,40 +123,61 @@ p{margin:0 0 1rem}
 .caption{font-size:.88rem;color:var(--night-muted);margin:1rem 0 0;padding-top:1rem;border-top:1px solid var(--night-line)}
 @media (max-width:480px){.dialogue li{grid-template-columns:1fr;gap:0}}
 
+/* proof strip: four true facts, small */
+.proof{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem 2rem;margin:0 0 1rem;padding:1.5rem 0;list-style:none;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media (min-width:900px){.proof{grid-template-columns:repeat(4,1fr)}}
+.proof li{display:grid;grid-template-columns:auto 1fr;gap:.1rem .7rem;align-items:start}
+.proof .ring{grid-row:1 / span 2;margin-top:.45rem;border-color:var(--node)}
+.proof b{font-weight:600;font-size:1rem}
+.proof span:not(.ring){grid-column:2;font-size:.9rem;color:var(--ink-3);line-height:1.45}
+
 /* sections */
 section{padding:4.5rem 0}
 section + section{border-top:1px solid var(--line)}
-#contact{border-top:0;padding-top:1.5rem}
-h2{font-size:clamp(1.8rem,3.6vw,2.5rem);letter-spacing:-.03em;line-height:1.1;margin:0 0 .6rem;font-weight:700}
-.sub{color:var(--ink-3);margin:0 0 3rem;max-width:40rem}
+h2{font-size:clamp(2rem,4.2vw,2.9rem);letter-spacing:-.02em;line-height:1.05;margin:0 0 .7rem;font-weight:600}
+.sub{color:var(--ink-3);margin:0 0 3rem;max-width:42rem;font-size:1.08rem}
 h3{font-size:1.5rem;letter-spacing:-.02em;line-height:1.2;margin:0;font-weight:600}
 
 /* status: a ring, like the ends of the EveAI circuit */
 .ring{width:.8rem;height:.8rem;border-radius:50%;border:2.5px solid var(--mint);flex:none}
 .status{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;color:var(--mint-ink)}
 
+/* how I can help: three doors, each with its own channel */
+.doors{display:grid;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden}
+@media (min-width:900px){.doors{grid-template-columns:repeat(3,1fr)}}
+.door{display:flex;flex-direction:column;padding:2rem 1.75rem;border-top:1px solid var(--line)}
+.door:first-child{border-top:0}
+@media (min-width:900px){.door{border-top:0;border-left:1px solid var(--line)}.door:first-child{border-left:0}}
+.door h3{font-size:1.3rem;margin-bottom:.6rem}
+.door p{color:var(--ink-2);margin-bottom:1rem}
+.door ul{margin:0 0 1.5rem;padding:0;list-style:none;display:grid;gap:.45rem}
+.door li{display:grid;grid-template-columns:auto 1fr;gap:.6rem;font-size:.97rem;color:var(--ink-2)}
+.door li .ring{width:.65rem;height:.65rem;margin-top:.5rem;border-color:var(--node);border-width:2px}
+.door .btn{margin-top:auto;align-self:flex-start}
+
 /* selected work: projects hang off one circuit line */
 .bus{position:relative;padding-left:2.5rem}
-@media (max-width:599px){.bus{padding-left:1.9rem}.bus::before{left:6px}.project::before{left:calc(-1.9rem - 1px)}.feature{padding:1.5rem 1.25rem}}
 .bus::before{content:"";position:absolute;left:8px;top:1rem;bottom:2rem;width:3px;border-radius:3px;background:var(--grad)}
+@media (max-width:599px){.bus{padding-left:1.9rem}.bus::before{left:6px}}
 .project{position:relative;display:grid;gap:1.5rem;padding:0 0 3.5rem}
 .project:last-child{padding-bottom:0}
-.project::before{content:"";position:absolute;left:calc(-2.5rem + 1px);top:.45rem;width:17px;height:17px;border-radius:50%;border:3.5px solid var(--node);background:var(--canvas)}
+.project::before{content:"";position:absolute;left:calc(-2.5rem + 1px);top:.45rem;width:17px;height:17px;border-radius:50%;border:3.5px solid var(--node);background:var(--ring-bg)}
+@media (max-width:599px){.project::before{left:calc(-1.9rem - 1px)}}
 @media (min-width:900px){.project{grid-template-columns:14rem 1fr;gap:3rem}}
 .ph{display:flex;flex-direction:column;gap:.55rem;align-items:flex-start}
 .ph .ar{font-weight:500;color:var(--ink-3);font-size:1.15rem}
 .pb{max-width:44rem}
-.pb .what{font-size:1.13rem;color:var(--ink)}
+.pb .result{font-family:var(--display);font-variation-settings:"SOFT" 50;font-size:1.4rem;line-height:1.25;letter-spacing:-.01em;font-weight:600;color:var(--ink);margin-bottom:.8rem}
+.pb .what{font-size:1.05rem;color:var(--ink-2)}
 .pb ul{margin:0 0 1.25rem;padding-left:1.1rem;color:var(--ink-2)}
 .pb li{margin:.35rem 0}
 .pb li::marker{color:var(--line-2)}
-.pb .stack,.thread .stack{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .9rem;padding:0;list-style:none}
-.pb .stack li,.thread .stack li{font-size:.85rem;color:var(--ink-2);background:var(--surface-2);border-radius:999px;padding:.2rem .7rem;margin:0}
+.stack{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .9rem;padding:0 !important;list-style:none}
+.stack li{font-size:.85rem;color:var(--ink-2);background:var(--surface-2);border-radius:999px;padding:.2rem .7rem;margin:0 !important}
 .plinks{display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline;font-size:.97rem;font-weight:500}
-.plinks .note{color:var(--ink-3);font-weight:400;font-size:.9rem}
 
 /* Sila: the featured one, on a night card */
-.feature{background:var(--night);color:var(--night-ink);border-radius:28px;padding:1.75rem 1.5rem;border:1px solid var(--night-line);box-shadow:var(--shadow)}
+.feature{background:var(--night);color:var(--night-ink);border-radius:28px;padding:1.5rem 1.25rem;border:1px solid var(--night-line);box-shadow:var(--shadow)}
 @media (min-width:600px){.feature{padding:2.25rem}}
 .sila{grid-template-columns:1fr}
 @media (min-width:900px){.sila .feature{display:grid;grid-template-columns:1.35fr 1fr;gap:2.5rem}}
@@ -152,8 +185,8 @@ h3{font-size:1.5rem;letter-spacing:-.02em;line-height:1.2;margin:0;font-weight:6
 .sila h3{font-size:1.9rem}
 .sila .ar{color:var(--night-muted)}
 .sila .status{color:#7BE3BF;flex-basis:100%}
-.sila .what{color:var(--night-ink)}
-.sila .pb ul{color:#C7C6CF}
+.sila .result{color:var(--night-ink)}
+.sila .what,.sila .pb ul{color:#C7C6CF}
 .sila .pb li::marker{color:#58575E}
 .sila .stack li{background:var(--night-2);color:#C7C6CF}
 .sila figure{margin:1.5rem 0 0;display:grid;grid-template-columns:1fr 1fr;gap:.75rem;align-content:start}
@@ -164,24 +197,52 @@ h3{font-size:1.5rem;letter-spacing:-.02em;line-height:1.2;margin:0;font-weight:6
 .sila .face img{max-width:200px;image-rendering:pixelated}
 .sila figcaption{font-size:.85rem;color:var(--night-muted);align-self:center}
 
-/* EveAI: philosophy, how it started, products, academy, on the same circuit line */
-.eve{background:var(--violet-soft);border-radius:32px;padding:2rem 1.25rem}
+/* the nudge after a block of work */
+.nudge{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 2rem;margin-top:3.5rem;padding:1.5rem 1.75rem;border-radius:24px;background:var(--violet-soft)}
+.nudge p{margin:0;font-size:1.08rem;font-weight:500;color:var(--ink)}
+.nudge p span{display:block;font-weight:300;font-size:.97rem;color:var(--ink-2)}
+
+/* AI characters: Zeinai */
+.chars{display:grid;gap:2.5rem}
+@media (min-width:960px){.chars{grid-template-columns:22rem 1fr;gap:3.5rem;align-items:start}}
+.chars-main{margin:0;position:relative}
+@media (min-width:960px){.chars-main{position:sticky;top:6rem}}
+.chars-main img{width:100%;height:auto;display:block;border-radius:28px;background:var(--surface-2)}
+.chars-main figcaption{margin-top:.8rem;font-size:.9rem;color:var(--ink-3)}
+.chars-main figcaption b{color:var(--ink);font-weight:600}
+.sheets{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin:1rem 0 1.2rem;padding:0;list-style:none}
+.sheets li{margin:0}
+.sheets img{width:100%;height:auto;display:block;border-radius:14px;background:var(--surface-2)}
+.sheets span{display:block;font-size:.82rem;color:var(--ink-3);margin-top:.35rem;line-height:1.35}
+.scenes{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:1rem 0 1.2rem;padding:0;list-style:none}
+.scenes img{width:100%;height:auto;display:block;border-radius:16px;background:var(--surface-2)}
+.scenes span{display:block;font-size:.82rem;color:var(--ink-3);margin-top:.35rem}
+.offer{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:1.4rem 1.5rem;margin-top:.4rem}
+.offer h4{margin:0 0 .4rem;font-size:1.08rem;font-weight:600}
+.offer p{margin:0 0 1rem;color:var(--ink-2);font-size:.98rem}
+
+/* the shared step thread (characters and EveAI) */
+.thread{list-style:none;margin:0;padding:0 0 0 2.25rem;position:relative;max-width:46rem}
+.thread::before{content:"";position:absolute;left:7px;top:.7rem;bottom:1.2rem;width:3px;border-radius:3px;background:var(--grad)}
+.thread > li{position:relative;padding-bottom:2.75rem}
+.thread > li:last-child{padding-bottom:0}
+.thread > li::before{content:"";position:absolute;left:-2.25rem;top:.42rem;width:17px;height:17px;border-radius:50%;border:3.5px solid var(--node);background:var(--ring-bg)}
+.thread h3{font-size:1.3rem;margin-bottom:.6rem}
+.thread p{color:var(--ink-2)}
+@media (max-width:599px){.thread{padding-left:1.9rem}.thread > li::before{left:-1.9rem}}
+.tlinks{display:flex;gap:.5rem 1.5rem;flex-wrap:wrap;font-weight:500;margin:0}
+
+/* EveAI */
+.eve{--ring-bg:var(--violet-soft);background:var(--violet-soft);border-radius:32px;padding:1.75rem 1rem}
 @media (min-width:600px){.eve{padding:2.75rem 2.5rem}}
 @media (min-width:960px){.eve{display:grid;grid-template-columns:14rem 1fr;gap:3.5rem;padding:3.5rem}}
 .eve-side{display:flex;flex-direction:column;gap:1.1rem;margin-bottom:2.25rem}
-@media (min-width:960px){.eve-side{position:sticky;top:2rem;align-self:start;margin:0}}
+@media (min-width:960px){.eve-side{position:sticky;top:6rem;align-self:start;margin:0}}
 .eve-side img{width:150px;height:auto;display:block}
 @media (min-width:960px){.eve-side img{width:100%}}
 .eve-side .ar-line{margin:0;font-size:1.05rem;line-height:1.85;color:var(--violet-ink);font-weight:500}
 .eve-side .note{margin:0;font-size:.88rem;color:var(--ink-3)}
-.thread{list-style:none;margin:0;padding:0 0 0 2.25rem;position:relative;max-width:46rem}
-.thread::before{content:"";position:absolute;left:7px;top:.7rem;bottom:1.2rem;width:3px;border-radius:3px;background:var(--grad)}
-.thread > li{position:relative;padding-bottom:3rem}
-.thread > li:last-child{padding-bottom:0}
-.thread > li::before{content:"";position:absolute;left:-2.25rem;top:.42rem;width:17px;height:17px;border-radius:50%;border:3.5px solid var(--node);background:var(--violet-soft)}
-.thread h3{font-size:1.35rem;margin-bottom:.7rem}
-.thread p{color:var(--ink-2)}
-.thread .big{font-size:clamp(1.35rem,2.6vw,1.75rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;color:var(--ink);margin-bottom:.9rem}
+.thread .big{font-family:var(--display);font-variation-settings:"SOFT" 100;font-style:italic;font-size:clamp(1.5rem,2.8vw,2rem);font-weight:600;letter-spacing:-.01em;line-height:1.15;color:var(--ink);margin-bottom:.9rem}
 .stages{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:1.1rem 0 1.2rem;padding:0;list-style:none}
 @media (min-width:760px){.stages{grid-template-columns:repeat(4,1fr)}}
 .stages li{background:var(--surface);border-radius:16px;padding:.85rem .95rem}
@@ -189,12 +250,11 @@ h3{font-size:1.5rem;letter-spacing:-.02em;line-height:1.2;margin:0;font-weight:6
 .stages span{display:block;font-size:.86rem;line-height:1.45;color:var(--ink-3)}
 .when{list-style:none;padding:0;margin:1rem 0 1.2rem;display:grid;gap:.45rem}
 .when li{display:grid;grid-template-columns:5.25rem 1fr;gap:.75rem;font-size:.95rem;color:var(--ink-2)}
+@media (max-width:599px){.when li{grid-template-columns:4.6rem 1fr;gap:.6rem}}
 .when time{color:var(--violet-ink);font-weight:500}
 .apps{list-style:none;padding:0;margin:1rem 0 1.2rem;display:grid;gap:.6rem}
 .apps li{font-size:.97rem;color:var(--ink-2);padding-left:1rem;border-left:2px solid var(--line-2)}
 .apps b{color:var(--ink);font-weight:600}
-.tlinks{display:flex;gap:.5rem 1.5rem;flex-wrap:wrap;font-weight:500;margin:0}
-@media (max-width:599px){.eve{padding:1.75rem 1rem}.thread{padding-left:1.9rem}.thread > li::before{left:-1.9rem}.when li{grid-template-columns:4.6rem 1fr;gap:.6rem}}
 
 /* more */
 .more{display:grid;gap:0 3rem;margin:0;padding:0;list-style:none}
@@ -214,32 +274,55 @@ h3{font-size:1.5rem;letter-spacing:-.02em;line-height:1.2;margin:0;font-weight:6
 .ship h3{font-size:1.2rem;margin-bottom:.5rem;color:var(--violet-ink)}
 .ship p{margin:0;color:var(--ink-2)}
 
-/* contact */
-.contact{display:grid;gap:2.5rem;align-items:center;background:var(--night);color:var(--night-ink);border-radius:28px;border:1px solid var(--night-line);box-shadow:var(--shadow);padding:2rem 1.5rem}
+/* contact: each channel says what it is for */
+#contact{border-top:0;padding-top:1.5rem}
+.contact{background:var(--night);color:var(--night-ink);border-radius:32px;border:1px solid var(--night-line);box-shadow:var(--shadow);padding:2rem 1.25rem}
 @media (min-width:600px){.contact{padding:2.75rem 2.5rem}}
-@media (min-width:900px){.contact{grid-template-columns:1.2fr 1fr;gap:4rem;padding:3.25rem 3.25rem}}
-.contact .sub{margin-bottom:2rem;color:var(--night-muted)}
-.contact .btn{background:transparent;color:var(--night-ink);border-color:var(--night-line)}
-.contact .btn:hover{border-color:var(--night-muted)}
-.contact .btn.primary{background:var(--action);border-color:var(--action);color:#fff}
-.contact .btn.primary:hover{background:var(--action-hover);border-color:var(--action-hover)}
-.arabic{direction:rtl;text-align:right;background:var(--night-2);border-radius:20px;padding:1.6rem 1.9rem;line-height:1.95;font-size:1.1rem}
-.arabic p{margin:0 0 .6rem}
+@media (min-width:960px){.contact{padding:3.5rem}}
+.contact h2{margin-bottom:.5rem}
+.contact .sub{color:var(--night-muted);margin-bottom:2.25rem}
+.channels{display:grid;gap:.75rem;margin:0 0 2rem;padding:0;list-style:none}
+@media (min-width:860px){.channels{grid-template-columns:repeat(3,1fr)}}
+.channels a{display:flex;flex-direction:column;gap:.35rem;height:100%;padding:1.35rem 1.4rem;border-radius:20px;background:var(--night-2);border:1px solid var(--night-line);color:var(--night-ink);text-decoration:none}
+.channels a:hover{border-color:#5A5670}
+.channels .for{font-size:.88rem;color:var(--night-muted)}
+.channels .how{display:flex;align-items:center;gap:.55rem;font-size:1.15rem;font-weight:600}
+.channels .how svg{width:20px;height:20px;flex:none}
+.channels .wa .how{color:#7BE3BF}
+.channels .li .how{color:#A6C4FF}
+.channels .ig .how{color:#C4BAFC}
+.contact-foot{display:grid;gap:1.5rem;align-items:center}
+@media (min-width:860px){.contact-foot{grid-template-columns:1fr 1.1fr;gap:2.5rem}}
+.contact-foot .also{margin:0;color:var(--night-muted);font-size:.95rem}
+.arabic{direction:rtl;text-align:right;background:var(--night-2);border-radius:20px;padding:1.4rem 1.7rem;line-height:1.95;font-size:1.08rem;margin:0}
+.arabic p{margin:0 0 .5rem}
 .arabic p:first-child{font-weight:600;color:var(--sun)}
 .arabic p:last-child{margin:0}
 
-footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center}
+footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center}
 .theme{background:none;border:1.5px solid var(--line-2);color:var(--ink-3);border-radius:999px;min-height:36px;padding:0 .9rem;font:inherit;font-size:.85rem;cursor:pointer}
 .theme:hover{color:var(--ink)}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <a class="me" href="#top"><img src="https://avatars.githubusercontent.com/u/56312801?v=4&s=96" alt="" width="40" height="40">Aref Hammadi</a>
-    <nav aria-label="Sections"><a href="#work">Work</a><a href="#eveai">EveAI</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
-  </header>
+<a class="skip" href="#top">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.7-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.5.6.2 1.2.2 1.7.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></symbol>
+  <symbol id="i-li" viewBox="0 0 24 24"><path fill="currentColor" d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2ZM8 19H5V9.5h3V19ZM6.5 8.2a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5ZM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5S12.8 13 12.8 14.3V19h-3V9.5h2.8v1.3h.1a3.1 3.1 0 0 1 2.8-1.5c3 0 3.5 2 3.5 4.5V19Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM21.9 7.9c0-1.6-.4-3-1.6-4.2-1.2-1.2-2.6-1.6-4.2-1.6-1.7-.1-6.6-.1-8.2 0-1.6 0-3 .4-4.2 1.6C2.5 4.9 2.1 6.3 2 7.9c-.1 1.7-.1 6.6 0 8.2 0 1.6.4 3 1.6 4.2 1.2 1.2 2.6 1.6 4.2 1.6 1.7.1 6.6.1 8.2 0 1.6 0 3-.4 4.2-1.6 1.2-1.2 1.6-2.6 1.6-4.2.1-1.6.1-6.5.1-8.2Zm-2.1 10a3.3 3.3 0 0 1-1.9 1.9c-1.3.5-4.4.4-5.9.4s-4.6.1-5.9-.4a3.3 3.3 0 0 1-1.9-1.9c-.5-1.3-.4-4.4-.4-5.9s-.1-4.6.4-5.9a3.3 3.3 0 0 1 1.9-1.9C7.4 3.7 10.5 3.8 12 3.8s4.6-.1 5.9.4a3.3 3.3 0 0 1 1.9 1.9c.5 1.3.4 4.4.4 5.9s.1 4.6-.4 5.9Z"/></symbol>
+</svg>
 
+<header class="topbar" id="topbar">
+  <div class="wrap top">
+    <a class="me" href="#top"><img src="https://avatars.githubusercontent.com/u/56312801?v=4&s=96" alt="" width="36" height="36">Aref Hammadi</a>
+    <div class="top-right">
+      <nav aria-label="Sections"><a href="#help">How I can help</a><a href="#work">Work</a><a href="#characters">AI characters</a><a href="#eveai">EveAI</a><a href="#skills">Skills</a></nav>
+      <a class="btn primary sm" href="#contact">Contact me</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
   <main id="top">
     <div class="hero">
       <div>
@@ -247,9 +330,8 @@ footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px sol
         <h1>AI researcher who ships.</h1>
         <p class="lede">I'm doing a <b>PhD in AI</b>, working with graph neural networks and language. I also <b>build AI products end to end</b> and run them myself, from Lebanon, under <a href="#eveai">EveAI</a>.</p>
         <div class="links">
-          <a class="btn primary" href="#work">See the work</a>
-          <a class="btn" href="https://www.linkedin.com/in/aref-hammadi10">LinkedIn</a>
-          <a class="btn" href="https://github.com/ArefHam">GitHub</a>
+          <a class="btn primary" href="#contact">Contact me</a>
+          <a class="btn" href="#work">See the work</a>
         </div>
       </div>
       <div class="panel">
@@ -278,9 +360,53 @@ footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px sol
       </div>
     </div>
 
+    <ul class="proof" aria-label="In short">
+      <li><span class="ring" aria-hidden="true"></span><b>PhD in AI</b><span>Graph neural networks and NLP.</span></li>
+      <li><span class="ring" aria-hidden="true"></span><b>Products that are live</b><span>Built, deployed and run by me under eveai.cloud.</span></li>
+      <li><span class="ring" aria-hidden="true"></span><b>A robot at an expo</b><span>Sila talked to visitors in Lebanese Arabic.</span></li>
+      <li><span class="ring" aria-hidden="true"></span><b>Three languages</b><span>Products in Arabic, English and Persian.</span></li>
+    </ul>
+
+    <section id="help" aria-labelledby="help-h">
+      <h2 id="help-h">How I can help</h2>
+      <p class="sub">Three ways to work with me. Each one goes straight to the channel I answer for it.</p>
+      <div class="doors">
+        <div class="door">
+          <h3>Hiring for an AI or ML role</h3>
+          <p>Research depth and production habits in one person: I read the papers, then build, deploy and run the thing.</p>
+          <ul>
+            <li><span class="ring" aria-hidden="true"></span>Applied AI: RAG, agents, voice, evaluation</li>
+            <li><span class="ring" aria-hidden="true"></span>Arabic and Persian text, Lebanese dialect</li>
+            <li><span class="ring" aria-hidden="true"></span>Shipping: Docker, CI, monitoring, cost control</li>
+          </ul>
+          <a class="btn primary" href="https://www.linkedin.com/in/aref-hammadi10"><svg aria-hidden="true"><use href="#i-li"/></svg>Message me on LinkedIn</a>
+        </div>
+        <div class="door">
+          <h3>AI for your business</h3>
+          <p>Consulting or a full build, from the first conversation to a running system, and I stay after launch.</p>
+          <ul>
+            <li><span class="ring" aria-hidden="true"></span>Chatbots and voice assistants in Lebanese Arabic</li>
+            <li><span class="ring" aria-hidden="true"></span>AI characters and content for your brand</li>
+            <li><span class="ring" aria-hidden="true"></span>Automations, internal tools, and AI training for your team</li>
+          </ul>
+          <a class="btn primary" href="https://wa.me/96178996408?text=Hi%20Aref%2C%20I%20saw%20your%20portfolio.%20I%27d%20like%20to%20talk%20about%20a%20project%3A%20"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a>
+        </div>
+        <div class="door">
+          <h3>Research collaboration</h3>
+          <p>Graph neural networks and NLP, with a practical streak: experiments that end up in something people can use.</p>
+          <ul>
+            <li><span class="ring" aria-hidden="true"></span>Graph neural networks for language</li>
+            <li><span class="ring" aria-hidden="true"></span>Evaluation design and datasets</li>
+            <li><span class="ring" aria-hidden="true"></span>Arabic and low-resource text</li>
+          </ul>
+          <a class="btn primary" href="https://www.linkedin.com/in/aref-hammadi10"><svg aria-hidden="true"><use href="#i-li"/></svg>Message me on LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
     <section id="work" aria-labelledby="work-h">
       <h2 id="work-h">Selected work</h2>
-      <p class="sub">Most of this code is private because it runs real businesses. Each entry says what is live, what I built, and with what.</p>
+      <p class="sub">Most of this code is private because it runs real businesses. Each entry opens with what it does in the world, then what I built and with what.</p>
 
       <div class="bus">
         <article class="project sila">
@@ -290,7 +416,8 @@ footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px sol
                 <h3>Sila</h3><span class="ar" lang="ar">صلة</span>
                 <span class="status"><span class="ring" aria-hidden="true"></span>Worked an expo stand, 2 robots running</span>
               </div>
-              <p class="what">A small talking desk robot with an animated face. It speaks Lebanese Arabic and English, and it worked as HMC's salesperson at an expo, answering visitors about batteries and solar in "amps", the unit Lebanese households actually think in.</p>
+              <p class="result">A desk robot that worked an expo stand as the salesperson, in Lebanese Arabic.</p>
+              <p class="what">Small, with an animated face, speaking Lebanese Arabic and English. It answered visitors about batteries and solar in "amps", the unit Lebanese households actually think in.</p>
               <ul>
                 <li>Its own voice server: speech in, any OpenAI-compatible model as the brain, a custom voice, and a learning mode where the shop manager teaches it new answers.</li>
                 <li>Firmware for an ESP32-S3 camera board with a 3.5" screen, built in GitHub Actions.</li>
@@ -314,9 +441,10 @@ footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px sol
             <span class="status"><span class="ring" aria-hidden="true"></span>Live in the cloud</span>
           </div>
           <div class="pb">
-            <p class="what">One program to run a battery and solar shop: till, stock, serial numbers, purchases, customer debts, repairs, cash, VAT invoices, labels, and battery pack assembly with cell matching.</p>
+            <p class="result">A whole shop in one program, and it keeps selling when the internet drops.</p>
+            <p class="what">Till, stock, serial numbers, purchases, customer debts, repairs, cash, VAT invoices, labels, and battery pack assembly with cell matching, for a battery and solar shop.</p>
             <ul>
-              <li>Runs on the shop PC and keeps selling offline, then syncs field by field with a cloud copy so the owner can check the shop from a phone.</li>
+              <li>Runs on the shop PC and works offline, then syncs field by field with a cloud copy so the owner can check the shop from a phone.</li>
               <li>English and Lebanese Arabic, with search that understands Arabic spelling variants and shorthand like "6kw".</li>
               <li>Prints stickers straight to label printers (TSPL/ZPL) and turns any phone into a barcode scanner.</li>
               <li>Written for a first-time shop owner: plain words instead of accounting terms, help on every field.</li>
@@ -332,7 +460,7 @@ footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px sol
             <span class="status"><span class="ring" aria-hidden="true"></span>Live</span>
           </div>
           <div class="pb">
-            <p class="what">A Persian and English assistant that answers mothers' breastfeeding questions from a curated knowledge base.</p>
+            <p class="result">Answers mothers' breastfeeding questions in Persian and English, from a curated knowledge base.</p>
             <ul>
               <li>Retrieval-augmented agent in n8n, with answers checked against multiple-choice and open-ended question sets.</li>
               <li>The new version (in launch testing) adds accounts and saved conversations: Supabase Auth and Postgres with row-level security, and an Edge Function in between, so the browser never holds a secret or the agent's address.</li>
@@ -348,7 +476,7 @@ footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px sol
             <span class="status"><span class="ring" aria-hidden="true"></span>Live, in development</span>
           </div>
           <div class="pb">
-            <p class="what">A money app for couples: one shared household treasury, with each partner's own view of what they spend and save.</p>
+            <p class="result">One shared household treasury for couples, with each partner's own view.</p>
             <ul>
               <li>Money stored as integers end to end, database-backed sessions, and service-level tests for the money rules.</li>
               <li>Web app plus an Android app, deployed with Docker.</li>
@@ -357,6 +485,60 @@ footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px sol
             <div class="plinks"><a href="https://coubank.eveai.cloud">coubank.eveai.cloud</a></div>
           </div>
         </article>
+      </div>
+
+      <div class="nudge">
+        <p>Want something like this for your business?<span>Tell me what you need on WhatsApp. Hiring? LinkedIn is best.</span></p>
+        <div class="links">
+          <a class="btn primary" href="https://wa.me/96178996408?text=Hi%20Aref%2C%20I%20saw%20your%20portfolio.%20I%27d%20like%20to%20talk%20about%20a%20project%3A%20"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a>
+          <a class="btn" href="https://www.linkedin.com/in/aref-hammadi10"><svg aria-hidden="true"><use href="#i-li"/></svg>LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="characters" aria-labelledby="characters-h">
+      <h2 id="characters-h">AI characters</h2>
+      <p class="sub">A character that stays the same person in every photo, reel and ad. Zeinai is the first one I made, and the method behind her is what EveAI teaches.</p>
+      <div class="chars">
+        <figure class="chars-main">
+          <img src="img/zeinai.webp" alt="Zeinai, an AI-generated Lebanese character, standing in a bright studio" width="720" height="900" loading="lazy">
+          <figcaption><b>Zeinai</b>, @zeinai0. 100% AI-generated, and says so: her creator is public and her process is open.</figcaption>
+        </figure>
+        <ol class="thread" aria-label="How a character is made">
+          <li>
+            <h3>Identity first</h3>
+            <p>Before any image, a written character: who she is, her world (Beirut, the Corniche, neighbourhood caf&eacute;s), how she speaks in Lebanese Arabic, and what she must never look like.</p>
+          </li>
+          <li>
+            <h3>One source of truth</h3>
+            <p>A single canonical reference image, then ranked sheets for face angles, expressions, poses and wardrobe. When two references disagree, the higher one wins, so the face never drifts.</p>
+            <ul class="sheets">
+              <li><img src="img/zeinai-angles.webp" alt="Character sheet: Zeinai's face from nine angles" width="640" height="640" loading="lazy"><span>Face angles</span></li>
+              <li><img src="img/zeinai-expressions.webp" alt="Character sheet: nine of Zeinai's facial expressions" width="640" height="640" loading="lazy"><span>Expressions</span></li>
+              <li><img src="img/zeinai-poses.webp" alt="Character sheet: Zeinai's poses and gestures in different outfits" width="640" height="640" loading="lazy"><span>Poses and wardrobe</span></li>
+            </ul>
+          </li>
+          <li>
+            <h3>Her world, the same face</h3>
+            <p>Then scenes: Raouche at golden hour, a Beirut caf&eacute;, her desk. The same person across image and video models, with a written prompt system that anyone on the team can repeat.</p>
+            <ul class="scenes">
+              <li><img src="img/zeinai-raouche.webp" alt="Zeinai leaning on the Corniche railing at sunset, with the Raouche rocks behind her" width="600" height="750" loading="lazy"><span>The Corniche, Raouche</span></li>
+              <li><img src="img/zeinai-cafe.webp" alt="Zeinai drinking coffee at an outdoor caf&eacute; table in Beirut" width="600" height="750" loading="lazy"><span>A Beirut caf&eacute;</span></li>
+            </ul>
+          </li>
+          <li>
+            <h3>Work for real businesses</h3>
+            <p>Carousels, lifestyle photos and 10 to 20 second video ads for Lebanese shops, caf&eacute;s and brands, among them a full video ad for a retail store and a reel for a modest sportswear brand. No studio, no camera, no crew.</p>
+            <div class="offer">
+              <h4>Your own AI character</h4>
+              <p>A character for your brand: personality, look, and the prompt system to keep making content with it. Yours to keep.</p>
+              <div class="links">
+                <a class="btn primary" href="https://instagram.com/zeinai0"><svg aria-hidden="true"><use href="#i-ig"/></svg>DM @zeinai0</a>
+                <a class="btn" href="https://wa.me/96178996408?text=Hi%20Aref%2C%20I%20saw%20Zeinai%20on%20your%20portfolio.%20I%27d%20like%20an%20AI%20character%20for%20my%20brand%3A%20"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a>
+              </div>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -367,7 +549,7 @@ footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px sol
         <div class="eve-side">
           <img src="img/eveai-mark.png" alt="The EveAI mark: an organic curve and a circuit trace meeting at a single point" width="360" height="287" loading="lazy">
           <p class="ar-line" lang="ar" dir="rtl">الـ AI مش بديل عنك. هو المطرح يلي فكرتك بتكبر فيه، والنتيجة بتطلع باسمك.</p>
-          <p class="note">One stroke drawn like a body, one like a circuit, meeting at one point. The circuit lines on this page come from this mark.</p>
+          <p class="note">One stroke drawn like a body, one like a circuit, meeting at one point. The circuit lines and the two typefaces on this page come from this mark.</p>
         </div>
         <ol class="thread">
           <li>
@@ -384,7 +566,7 @@ footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px sol
           </li>
           <li>
             <h3>How it started</h3>
-            <p>In early 2026 I watched AI content tools change marketing in New York and Dubai, while the caf&eacute;, the salon and the boutique near me still posted phone photos, or nothing. So I ran an experiment: Zeinai, a Lebanese AI character, with every image, post and caption made with AI tools and one repeatable system. No studio, no photographer, no team.</p>
+            <p>In early 2026 I watched AI content tools change marketing in New York and Dubai, while the caf&eacute;, the salon and the boutique near me still posted phone photos, or nothing. So I ran an experiment: <a href="#characters">Zeinai</a>, a Lebanese AI character, with every image, post and caption made with AI tools and one repeatable system. No studio, no photographer, no team.</p>
             <p>Then businesses started asking: "How did you make that? Can you do it for us?"</p>
             <ul class="when">
               <li><time datetime="2026-01">Jan 2026</time><span>Zeinai's first reference photos; her look is fixed.</span></li>
@@ -392,7 +574,6 @@ footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px sol
               <li><time datetime="2026-05">May 2026</time><span>The method written down as a prompt book.</span></li>
               <li><time datetime="2026-06">Jun 2026</time><span>The system starts turning into a course.</span></li>
             </ul>
-            <p class="tlinks"><a href="https://eveai.cloud/zeinai">Zeinai, the case study</a></p>
           </li>
           <li>
             <h3>The products</h3>
@@ -439,10 +620,10 @@ footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px sol
       <dl class="skills">
         <div><dt>Research</dt><dd>Graph neural networks, NLP, self-supervised learning, evaluation design.</dd></div>
         <div><dt>Applied AI</dt><dd>RAG, agents and tool use, voice (speech in, speech out), cost control, provider-agnostic model layers, Arabic and Persian text.</dd></div>
+        <div><dt>Generative media</dt><dd>Consistent AI characters, reference sheets, image and video models, prompt systems a team can repeat.</dd></div>
         <div><dt>Software</dt><dd>Python (FastAPI), TypeScript (React, Next.js, Node), PostgreSQL, SQLite, Supabase, Telegram bots.</dd></div>
         <div><dt>Hardware</dt><dd>ESP32-S3 firmware, screens and audio boards, enclosures generated from code, 3D printing.</dd></div>
-        <div><dt>Running things</dt><dd>Docker, Coolify, GitHub Actions, n8n, DNS, backups, budgets and alerts.</dd></div>
-        <div><dt>How I build</dt><dd>With AI coding agents (Claude Code, Codex) as a team: I write the plan, review every change, and keep the tests.</dd></div>
+        <div><dt>Running things</dt><dd>Docker, Coolify, GitHub Actions, n8n, DNS, backups, budgets and alerts. I build with AI coding agents (Claude Code, Codex) as a team: I write the plan, review every change, and keep the tests.</dd></div>
       </dl>
       <div class="ship">
         <h3>I ship and run what I build</h3>
@@ -452,18 +633,20 @@ footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px sol
 
     <section id="contact" aria-labelledby="contact-h">
       <div class="contact">
-        <div>
-          <h2 id="contact-h">Let's talk</h2>
-          <p class="sub">Based in Lebanon, open to remote AI and ML roles, AI consulting, research collaborations, and building AI products for businesses.</p>
-          <div class="links">
-            <a class="btn primary" href="https://www.linkedin.com/in/aref-hammadi10">Message me on LinkedIn</a>
-            <a class="btn" href="https://github.com/ArefHam">GitHub</a>
-            <a class="btn" href="https://eveai.cloud">EveAI</a>
+        <h2 id="contact-h">Let's talk</h2>
+        <p class="sub">Based in Lebanon, working remotely. Pick the line that matches what you need.</p>
+        <ul class="channels">
+          <li><a class="li" href="https://www.linkedin.com/in/aref-hammadi10"><span class="for">A role on your team, or research together</span><span class="how"><svg aria-hidden="true"><use href="#i-li"/></svg>LinkedIn</span></a></li>
+          <li><a class="wa" href="https://wa.me/96178996408?text=Hi%20Aref%2C%20I%20saw%20your%20portfolio.%20I%27d%20like%20to%20talk%20about%20a%20project%3A%20"><span class="for">A project or consulting for your business</span><span class="how"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</span></a></li>
+          <li><a class="ig" href="https://instagram.com/zeinai0"><span class="for">An AI character for your brand</span><span class="how"><svg aria-hidden="true"><use href="#i-ig"/></svg>@zeinai0</span></a></li>
+          <!-- Email goes here once Aref gives the address: a 4th channel, "Anything else", mailto. -->
+        </ul>
+        <div class="contact-foot">
+          <p class="also">Code and profile on <a href="https://github.com/ArefHam">GitHub</a>. The studio is at <a href="https://eveai.cloud">eveai.cloud</a>.</p>
+          <div class="arabic" lang="ar">
+            <p>بدّك بوت، تطبيق، شخصية AI لبراندك، أو روبوت بيحكي لبناني؟</p>
+            <p>بعملّك ياه من الفكرة لحدّ ما يشتغل عندك، وبضلّ معك بعدها. ابعتلي عالواتساب ومنحكي.</p>
           </div>
-        </div>
-        <div class="arabic" lang="ar">
-          <p>بدّك بوت، تطبيق، أو روبوت بيحكي لبناني لشغلك؟</p>
-          <p>بعملّك ياه من الفكرة لحدّ ما يشتغل عندك، وبضلّ معك بعدها. ابعتلي على لينكدإن ومنحكي.</p>
         </div>
       </div>
     </section>
@@ -484,6 +667,9 @@ footer{padding:2rem 0 3rem;color:var(--ink-3);font-size:.9rem;border-top:1px sol
     marks.forEach(function(m,i){m.style.transitionDelay=(0.5+i*0.45)+'s';});
     requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('done');});});
   }
+  var bar=document.getElementById('topbar');
+  function onScroll(){bar.classList.toggle('scrolled',window.scrollY>8);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
   var root=document.documentElement, btn=document.getElementById('theme');
   try{var saved=localStorage.getItem('theme');if(saved)root.setAttribute('data-theme',saved);}catch(e){}
   btn.addEventListener('click',function(){
